@@ -1,6 +1,3 @@
-[Uploading README.md…]()
-# My-Consumer-Mobile-App-
-Example of Consumer Mobile App 
 # MyMeridian — customer self-care app
 
 **Hybrid mobile app (Android & iOS) for Meridian Telecom Group customers**
