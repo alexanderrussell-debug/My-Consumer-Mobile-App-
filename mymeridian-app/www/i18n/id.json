@@ -1,0 +1,9 @@
+{
+  "LOGIN": { "TAGLINE": "Akun Meridian di genggaman Anda", "MSISDN": "Nomor ponsel", "PASSWORD": "Kata sandi", "REMEMBER": "Ingat saya", "SUBMIT": "Masuk" },
+  "MENU": { "HOME": "Beranda", "USAGE": "Pemakaian", "BILLS": "Tagihan", "TOPUP": "Isi ulang", "ADDONS": "Paket tambahan", "ROAMING": "Roaming", "PROFILE": "Profil", "LOGOUT": "Keluar" },
+  "COMMON": { "PULL": "Tarik untuk memperbarui", "UPDATED": "Diperbarui" },
+  "DASHBOARD": { "HELLO": "Hai", "BALANCE": "Pulsa", "OUTSTANDING": "Jumlah tagihan", "DUE": "Jatuh tempo" },
+  "USAGE": { "DATA": "Data", "VOICE": "Panggilan", "SMS": "SMS" },
+  "BILLS": { "DUE": "Jatuh tempo", "TOTAL": "Total", "PAY": "Bayar" },
+  "PROFILE": { "NAME": "Nama", "EMAIL": "Email", "LANGUAGE": "Bahasa", "SAVE": "Simpan" }
+}

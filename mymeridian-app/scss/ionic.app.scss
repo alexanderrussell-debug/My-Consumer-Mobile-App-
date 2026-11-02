@@ -1,0 +1,11 @@
+/*
+ * NOT COMPILED SINCE 2.4 - node-sass 3.x no longer installs on the build Mac (Python 2 / node-gyp).
+ * Styles are edited directly in www/css/style.css.
+ */
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #00a6a6 !default;
+$brand:                           #0b3954;
+
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "www/lib/ionic/scss/ionic";

@@ -1,0 +1,7 @@
+{
+  "name": "MyMeridian",
+  "app_id": "a1b2c3d4",
+  "type": "ionic1",
+  "gulpStartupTasks": ["sass", "watch"],
+  "watchPatterns": ["www/**/*", "!www/lib/**/*"]
+}

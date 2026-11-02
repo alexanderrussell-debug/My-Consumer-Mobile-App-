@@ -1,0 +1,12 @@
+<ion-view view-title="{{ 'MENU.BILLS' | translate }}">
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="item-icon-right" ng-repeat="b in bills" href="#/app/bills/{{b.id}}">
+        <h2>{{ b.period }}</h2>
+        <p>{{ 'BILLS.DUE' | translate }} {{ b.dueDate | shortDate }} &middot; <span ng-class="b.status == 'PAID' ? 'balanced' : 'assertive'">{{ b.status }}</span></p>
+        <span class="item-note">{{ b.amount | sgd }}</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

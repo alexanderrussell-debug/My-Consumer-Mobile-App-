@@ -1,0 +1,27 @@
+<ion-view view-title="MyMeridian" hide-nav-bar="true" class="login-view">
+  <ion-content class="login-content" scroll="false">
+    <div class="login-brand">
+      <div class="logo-mark">M</div>
+      <h1>MyMeridian</h1>
+      <p>{{ 'LOGIN.TAGLINE' | translate }}</p>
+    </div>
+    <div class="list list-inset login-form">
+      <label class="item item-input">
+        <i class="icon ion-iphone placeholder-icon"></i>
+        <input type="tel" placeholder="{{ 'LOGIN.MSISDN' | translate }}" ng-model="form.msisdn">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-locked placeholder-icon"></i>
+        <input type="password" placeholder="{{ 'LOGIN.PASSWORD' | translate }}" ng-model="form.password">
+      </label>
+      <ion-toggle ng-model="form.remember" toggle-class="toggle-positive">{{ 'LOGIN.REMEMBER' | translate }}</ion-toggle>
+    </div>
+    <div class="padding">
+      <button class="button button-block button-brand" ng-click="login()">{{ 'LOGIN.SUBMIT' | translate }}</button>
+      <button class="button button-block button-clear button-light" ng-click="touchId()">
+        <i class="icon ion-ios-locked-outline"></i> {{ 'LOGIN.TOUCHID' | translate }}
+      </button>
+    </div>
+    <p class="login-hint">Demo: 6591000001 / password123 (postpaid) &middot; 6581000001 / password123 (prepaid)</p>
+  </ion-content>
+</ion-view>

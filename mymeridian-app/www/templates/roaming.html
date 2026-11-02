@@ -1,0 +1,16 @@
+<ion-view view-title="{{ 'MENU.ROAMING' | translate }}">
+  <ion-content class="has-header">
+    <div class="list card">
+      <ion-toggle ng-model="roaming.enabled" ng-change="toggle()" toggle-class="toggle-positive">
+        {{ 'ROAMING.TOGGLE' | translate }}
+      </ion-toggle>
+      <div class="item item-text-wrap roaming-status" ng-class="roaming.enabled ? 'on' : 'off'">
+        <i class="icon" ng-class="roaming.enabled ? 'ion-checkmark-circled' : 'ion-close-circled'"></i>
+        {{ roaming.enabled ? ('ROAMING.ON' | translate) : ('ROAMING.OFF' | translate) }}
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap roaming-info">{{ 'ROAMING.INFO' | translate }}</div>
+    </div>
+  </ion-content>
+</ion-view>

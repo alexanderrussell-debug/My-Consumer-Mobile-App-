@@ -1,0 +1,14 @@
+<ion-view view-title="{{ 'MENU.ADDONS' | translate }}">
+  <ion-content class="has-header">
+    <div class="card addon-card" ng-repeat="a in addons" ng-class="'addon-' + a.code">
+      <div class="item item-text-wrap">
+        <h2>{{ a.name }}</h2>
+        <p>{{ a.description }}</p>
+        <div class="addon-foot">
+          <span class="addon-price">S${{ a.price }}</span>
+          <button class="button button-small button-brand" ng-click="buy(a)">{{ 'ADDONS.BUY' | translate }}</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

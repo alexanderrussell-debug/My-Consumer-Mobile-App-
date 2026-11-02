@@ -1,0 +1,22 @@
+<ion-view view-title="{{ 'MENU.TOPUP' | translate }}">
+  <ion-content class="has-header">
+    <div class="card">
+      <div class="item">{{ 'DASHBOARD.BALANCE' | translate }}<span class="item-note">{{ account.balance | sgd }}</span></div>
+    </div>
+    <div class="padding">
+      <div class="amount-grid">
+        <button class="button amount" ng-repeat="a in amounts" ng-class="{'button-brand': form.amount == a}" ng-click="select(a)">S${{ a }}</button>
+      </div>
+      <p class="bonus" ng-if="bonus() > 0">+ S${{ bonus() }} {{ 'TOPUP.BONUS' | translate }}</p>
+    </div>
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">{{ 'TOPUP.CARD' | translate }}</div>
+        <select ng-model="form.card" ng-options="c.token as c.label for c in cards"></select>
+      </label>
+    </div>
+    <div class="padding">
+      <button class="button button-block button-brand" ng-click="pay()">{{ 'TOPUP.PAY' | translate }} S${{ form.amount }}</button>
+    </div>
+  </ion-content>
+</ion-view>

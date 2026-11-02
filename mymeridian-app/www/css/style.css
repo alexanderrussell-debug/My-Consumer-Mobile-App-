@@ -1,0 +1,69 @@
+/* MyMeridian custom styles. scss/ is no longer compiled (since 2.4) - edit this file directly. */
+
+.bar-brand { background-color: #0b3954 !important; border-color: #08283b !important; }
+.bar-brand .title, .bar-brand .button { color: #fff !important; }
+.button-brand { background-color: #00a6a6 !important; border-color: #008c8c !important; color: #fff !important; }
+.button-brand.activated { background-color: #008c8c !important; }
+
+/* ---------- login ---------- */
+.login-content { background: linear-gradient(160deg, #0b3954 0%, #087e8b 100%); }
+.login-brand { text-align: center; color: #fff; margin-top: 70px; margin-bottom: 20px; }
+.login-brand h1 { color: #fff; font-weight: 300; font-size: 30px; margin: 10px 0 4px; }
+.login-brand p { color: #bfe3e6; }
+.logo-mark { width: 64px; height: 64px; line-height: 64px; margin: 0 auto; border-radius: 16px; background: #00a6a6;
+  color: #fff; font-size: 34px; font-weight: bold; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+.login-form { border-radius: 8px; overflow: hidden; }
+.login-hint { text-align: center; color: #9fd3d8; font-size: 12px; padding: 0 20px; }
+
+/* ---------- menu ---------- */
+.menu-header { height: 80px !important; }
+.menu-user { color: #fff; padding: 14px 6px; }
+.menu-name { font-size: 18px; }
+.menu-msisdn { font-size: 13px; color: #9fd3d8; }
+.menu-header + .has-header { top: 80px !important; }
+ion-side-menu .item .icon { margin-right: 10px; color: #087e8b; }
+
+/* ---------- dashboard ---------- */
+.dashboard { background: #f2f5f7; }
+.hero-card { margin-top: 14px; }
+.hero { background: #0b3954; color: #fff; }
+.hero-greeting { font-size: 20px; }
+.hero-plan { color: #9fd3d8; font-size: 13px; margin-top: 2px; }
+.hero-amount { font-size: 34px; font-weight: 300; margin-top: 14px; }
+.hero-amount small { display: block; margin-bottom: 6px; line-height: 1.2; font-size: 12px; color: #9fd3d8; text-transform: uppercase; letter-spacing: 1px; }
+.hero-due { font-size: 13px; color: #ffd166; margin-top: 4px; }
+.updated { float: right; font-size: 11px; color: #888; font-weight: normal; }
+.quick-actions { padding: 0 10px; }
+.quick-actions .col { background: #fff; margin: 4px; border-radius: 6px; text-align: center; padding: 14px 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.quick-actions .icon { display: block; font-size: 26px; color: #087e8b; }
+.quick-actions span { font-size: 12px; color: #444; }
+.promo { background: #fff8e1; }
+.promo h3 { color: #b35c00; }
+
+/* ---------- usage bar ---------- */
+.usage-bar { margin: 8px 0 16px; }
+.usage-bar-head { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+.usage-label { font-weight: bold; color: #0b3954; }
+.usage-figures { color: #666; }
+.usage-track { height: 10px; border-radius: 5px; background: #e3e9ed; overflow: hidden; }
+.usage-fill { height: 100%; width: 0; border-radius: 5px; transition: width .6s ease; }
+.usage-fill.low { background: #00a6a6; }
+.usage-fill.mid { background: #f4a259; }
+.usage-fill.high { background: #e63946; }
+.usage-detail { font-size: 12px; color: #666; margin: -8px 0 14px; }
+
+/* ---------- misc ---------- */
+.total-line { font-weight: bold; }
+.addon-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+.addon-price { font-size: 18px; color: #0b3954; }
+.addon-card.purchased { opacity: .5; }
+.amount-grid { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.amount-grid .amount { width: 48%; margin-bottom: 8px; font-size: 18px; }
+.bonus { color: #087e8b; text-align: center; }
+.roaming-status { font-size: 15px; }
+.roaming-status.on { color: #087e8b; }
+.roaming-status.off { color: #e63946; }
+.roaming-status .icon { font-size: 22px; vertical-align: middle; margin-right: 6px; }
+.roaming-info { color: #666; font-size: 13px; }
+.version { text-align: center; color: #999; font-size: 12px; }

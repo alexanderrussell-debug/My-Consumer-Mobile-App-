@@ -1,0 +1,45 @@
+<ion-view view-title="{{ 'MENU.HOME' | translate }}">
+  <ion-content class="has-header dashboard">
+    <ion-refresher pulling-text="{{ 'COMMON.PULL' | translate }}" on-refresh="doRefresh()"></ion-refresher>
+
+    <div class="card hero-card">
+      <div class="item item-text-wrap hero">
+        <div class="hero-greeting">{{ 'DASHBOARD.HELLO' | translate }}, {{ account.name.split(' ')[0] }}</div>
+        <div class="hero-plan">{{ account.planName }} &middot; {{ account.msisdn }}</div>
+        <div class="hero-amount" ng-if="account.paymentType == 'PRE'">
+          <small>{{ 'DASHBOARD.BALANCE' | translate }}</small>{{ account.balance | sgd }}
+        </div>
+        <div class="hero-amount" ng-if="account.paymentType == 'POST'">
+          <small>{{ 'DASHBOARD.OUTSTANDING' | translate }}</small>{{ account.outstanding | sgd }}
+          <div class="hero-due" ng-if="account.dueDate">{{ 'DASHBOARD.DUE' | translate }} {{ account.dueDate | shortDate }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        {{ 'DASHBOARD.ALLOWANCE' | translate }}
+        <span class="updated">{{ 'COMMON.UPDATED' | translate }} {{ lastUpdatedText() }}</span>
+      </div>
+      <div class="item" ng-if="loading"><ion-spinner></ion-spinner></div>
+      <div class="item item-text-wrap" ng-if="usage">
+        <usage-bar label="{{ 'USAGE.DATA' | translate }}" used="usage.data.usedGb" total="usage.data.allowanceGb" unit="GB"></usage-bar>
+        <usage-bar label="{{ 'USAGE.VOICE' | translate }}" used="usage.voice.usedMin" total="usage.voice.allowanceMin" unit="min"></usage-bar>
+        <usage-bar label="{{ 'USAGE.SMS' | translate }}" used="usage.sms.used" total="usage.sms.allowance" unit="SMS"></usage-bar>
+      </div>
+    </div>
+
+    <div class="row quick-actions">
+      <div class="col" ng-click="go('app.addons')"><i class="icon ion-bag"></i><span>{{ 'MENU.ADDONS' | translate }}</span></div>
+      <div class="col" ng-click="go('app.roaming')"><i class="icon ion-plane"></i><span>{{ 'MENU.ROAMING' | translate }}</span></div>
+      <div class="col" ng-click="go(account.paymentType == 'PRE' ? 'app.topup' : 'app.bills')">
+        <i class="icon" ng-class="account.paymentType == 'PRE' ? 'ion-card' : 'ion-document-text'"></i>
+        <span>{{ account.paymentType == 'PRE' ? ('MENU.TOPUP' | translate) : ('MENU.BILLS' | translate) }}</span>
+      </div>
+    </div>
+
+    <div class="card promo-card" ng-repeat="p in promos">
+      <div class="item item-text-wrap promo" ng-bind-html="p.trustedHtml"></div>
+    </div>
+  </ion-content>
+</ion-view>

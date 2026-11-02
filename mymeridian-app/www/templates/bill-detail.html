@@ -1,0 +1,12 @@
+<ion-view view-title="{{ bill.period }}">
+  <ion-content class="has-header">
+    <div class="card" ng-if="bill">
+      <div class="item item-divider">{{ 'BILLS.SUMMARY' | translate }}</div>
+      <div class="item" ng-repeat="l in bill.lines">{{ l.label }}<span class="item-note">{{ l.amount | sgd }}</span></div>
+      <div class="item total-line">{{ 'BILLS.TOTAL' | translate }}<span class="item-note">{{ bill.amount | sgd }}</span></div>
+    </div>
+    <div class="padding" ng-if="bill.status != 'PAID'">
+      <button class="button button-block button-brand" ng-click="pay()">{{ 'BILLS.PAY' | translate }} {{ bill.amount | sgd }}</button>
+    </div>
+  </ion-content>
+</ion-view>

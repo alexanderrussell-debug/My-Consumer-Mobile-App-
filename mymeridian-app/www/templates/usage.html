@@ -1,0 +1,27 @@
+<ion-view view-title="{{ 'MENU.USAGE' | translate }}">
+  <ion-content class="has-header">
+    <ion-refresher pulling-text="{{ 'COMMON.PULL' | translate }}" on-refresh="doRefresh()"></ion-refresher>
+    <div class="card" ng-if="usage">
+      <div class="item item-divider">{{ usage.periodStart | shortDate }} &ndash; {{ usage.periodEnd | shortDate }}</div>
+      <div class="item item-text-wrap">
+        <usage-bar label="{{ 'USAGE.DATA' | translate }}" used="usage.data.usedGb" total="usage.data.allowanceGb" unit="GB"></usage-bar>
+        <p class="usage-detail">{{ usage.data.usedGb | dataSize }} used &middot; {{ usage.data.remainingGb | dataSize }} left</p>
+        <usage-bar label="{{ 'USAGE.VOICE' | translate }}" used="usage.voice.usedMin" total="usage.voice.allowanceMin" unit="min"></usage-bar>
+        <usage-bar label="{{ 'USAGE.SMS' | translate }}" used="usage.sms.used" total="usage.sms.allowance" unit="SMS"></usage-bar>
+      </div>
+    </div>
+    <div class="button-bar padding">
+      <a class="button button-small" ng-class="{'button-brand': filter=='ALL'}" ng-click="setFilter('ALL')">All</a>
+      <a class="button button-small" ng-class="{'button-brand': filter=='DATA'}" ng-click="setFilter('DATA')">Data</a>
+      <a class="button button-small" ng-class="{'button-brand': filter=='VOICE'}" ng-click="setFilter('VOICE')">Calls</a>
+      <a class="button button-small" ng-class="{'button-brand': filter=='SMS'}" ng-click="setFilter('SMS')">SMS</a>
+    </div>
+    <ion-list>
+      <ion-item class="item-text-wrap usage-event" ng-repeat="ev in usage.events | filter:matches">
+        <h3>{{ ev.description }}</h3>
+        <p>{{ ev.time | dateTime }}</p>
+        <span class="item-note">{{ ev.amount }}</span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+{
+  "LOGIN": { "TAGLINE": "Your Meridian account in your pocket", "MSISDN": "Mobile number", "PASSWORD": "Password", "REMEMBER": "Remember me", "SUBMIT": "Log in", "TOUCHID": "Log in with Touch ID" },
+  "MENU": { "HOME": "Home", "USAGE": "Usage", "BILLS": "Bills", "TOPUP": "Top up", "ADDONS": "Add-ons", "ROAMING": "Roaming", "PROFILE": "Profile", "LOGOUT": "Log out" },
+  "COMMON": { "PULL": "Pull to refresh", "UPDATED": "Updated" },
+  "DASHBOARD": { "HELLO": "Hi", "BALANCE": "Balance", "OUTSTANDING": "Amount due", "DUE": "Due", "ALLOWANCE": "This month" },
+  "USAGE": { "DATA": "Data", "VOICE": "Calls", "SMS": "SMS" },
+  "BILLS": { "DUE": "Due", "SUMMARY": "Bill summary", "TOTAL": "Total", "PAY": "Pay" },
+  "ADDONS": { "BUY": "Add" },
+  "TOPUP": { "BONUS": "bonus credit", "CARD": "Pay with", "PAY": "Top up" },
+  "ROAMING": { "TOGGLE": "Roaming", "ON": "Roaming is ON. Roaming charges apply overseas.", "OFF": "Roaming is OFF. You will not be charged for roaming.", "INFO": "Changes take effect within 15 minutes. Data roaming in ASEAN is included in Postpaid XL." },
+  "PROFILE": { "NAME": "Name", "EMAIL": "Email", "LANGUAGE": "Language", "SAVE": "Save" }
+}
